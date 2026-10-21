@@ -1,11 +1,9 @@
-**Date**<br>
-**Course Code & Course Name**<br>
-**Student's First Name & Last Name**<br>
+**October 21, 2026**<br>
+**MPAD2003A Introductory Data Storytelling**<br>
+**Madeline Faulds**<br>
 **Presented to Jean-Sébastien Marier**<br>
 
 # Deliverable 2: Exploratory Data Analysis (EDA)
-
-Use one hashtag symbol (`#`) to create a level 1 heading like this one.
 
 ## Foreword
 
