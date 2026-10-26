@@ -56,7 +56,9 @@ As seen in Bounegru & Gray (2011), a data visualization should be clear...
 
 ### 2.2. Cleaning Data
 
-Insert text here.
+First, I downloaded the CSV formats of the 2022, 2023, 2024, and 2025 datasets for the most requested titles at the Ottawa Public Library. I imported them into google sheets and selected the first 100 titles of each set, which I pasted into a new sheet (no longer attached to import). I deleted all of the unnesecary columns for my intended story, which were Collection, Catalogue, Format, FID, and Object ID. I froze the first row, and bolded the titles of each column for clarity. 
+
+
 
 ### 2.3. Analyzing Data
 
