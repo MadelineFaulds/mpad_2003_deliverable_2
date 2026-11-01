@@ -31,17 +31,32 @@ I located the 2022, 2023, 2024, and 2025 datasets for the most requested titles 
 ![](import-screen-capture-2025.png) <br> 
 *Figure 4: The "Import File" prompt on Google Sheets for the 2025 dataset.* 
 
-I intend to compare these datasets to social media "reading lists" for the corresponding years, so I also located articles that listed the 2022, 2023, 2024, and 2025 most recommended titles on BookTok. I used `=IMPORTHTML("https://mashable.com/article/most-read-books-2022-tiktok", "list")` as it is the only list on the website. I used`=IMPORTXML("https://www.usmagazine.com/entertainment/news/2023-booktok-recommendations-biggest-books-on-the-app/", "//h3[contains(text(), 'by') or contains(text(), 'Happy Place')]")` for a 2023 list, which were all unfortunately much shorter, and the command filtered out the "related" pop ups. I used `=IMPORTXML("https://www.rollingstone.com/culture/culture-lists/booktok-best-books-2024-1235090973/piglet-by-lottie-hazel-1235203379/", "//h2")` for a 2024 list. And finally, I used `=IMPORTXML("https://www.kobo.com/blog/the-best-book-booktok-2025", "//h2")` for a 2025 reading list. 
+The 2022 list of most requested titles has 57,050 rows (excluding the title row), and 13 columns. The data is relatively clean, but does have a few missing values in the author column (G).  
 
+The 2023 list of most requested titles has 96,113 rows (excluding the title row), and 13 columns. This set is also very clean, but also has several missing values in column G (authors names). 
+
+the 2024 list of most requested titles has 135,036 rows (excluding the title row), and 14 columns. There appear to far less missing values in column G, but there are certainly still empty slots. 
+
+the 2025 list of most requested titles has 126,969 rows (excluding the title row), and 14 columns. Again, column G is missing a few values. 
+
+The most relevant columns in all of these datasets will be D, which contains the book titles, G with the authors names, and H with the number of holds. 
+
+
+
+I intend to compare these datasets to social media "reading lists" for the corresponding years, so I also located articles that listed the 2022, 2023, 2024, and 2025 most recommended titles on BookTok.
+1. For the 2022 list, I used: `=IMPORTHTML("https://mashable.com/article/most-read-books-2022-tiktok", "list")` 
+2. For the 2023 list, I used: `=IMPORTXML("https://www.usmagazine.com/entertainment/news/2023-booktok-recommendations-biggest-books-on-the-app/", "//h3[contains(text(), 'by') or contains(text(), 'Happy Place')]")` 
+3. For the 2024 list, I used: `=IMPORTXML("https://www.rollingstone.com/culture/culture-lists/booktok-best-books-2024-1235090973/piglet-by-lottie-hazel-1235203379/", "//h2")` 
+4. For the 2025 list, I used: `=IMPORTXML("https://www.kobo.com/blog/the-best-book-booktok-2025", "//h2")` 
 
 
 ## 2. Understanding Data
 
 ### 2.1. VIMO Analysis
 
-Use three hashtag symbols (`###`) to create a level 3 heading like this one. Please follow this template when it comes to level 1 and level 2 headings. However, you can use level 3 headings as you see fit.
+Unfortunately, these datasets exclude digital platforms like overdrive. This means that an entire demographic of readers, those borrowing on the Libby app, are not being represented in this data. Luckily, I don't think it will significantly impact my intended story. 
 
-Insert text here.
+As mentioned previously, there are several missing values in the author column of each dataset. For example, the second title in the 2025 dataset, *Yellowstone*, does not name an author. 
 
 Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
 
