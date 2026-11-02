@@ -7,16 +7,7 @@
 
 ## Foreword
 
-For this assignment, you must clean and analyze the dataset from Deliverable 1, create exploratory charts/visualizations, and identify a potential story. Your assignment must clearly detail your process. You are expected to write about 1,000-1,200 words, and to include several screen captures showing the different steps you went through. Your assignment must be written with the Markdown format and submitted on GitHub.
 
-**Here are some useful resources for this assignment:**
-
-* [GitHub's *Basic writing and formatting syntax* page](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-* [The template repository for this assignment in case you delete something by mistake](https://github.com/jsmarier/jou4100_jou4500_mpad2003_project2_template)
-
-Did you notice how to create a hyperlink? In Markdown, we put the clickable text between square brackets and the actual URL between parentheses.
-
-And to create an unordered list, we simply put a star (`*`) before each item.
 
 ## 1. Getting Data
 
@@ -39,52 +30,79 @@ the 2024 list of most requested titles has 135,036 rows (excluding the title row
 
 the 2025 list of most requested titles has 126,969 rows (excluding the title row), and 14 columns. Again, column G is missing a few values. 
 
-The most relevant columns in all of these datasets will be D, which contains the book titles, G with the authors names, and H with the number of holds. 
+The most relevant columns in all of these datasets will be columns D, which contains the book titles, G, which contains the author names, and H, which contains the number of holds. 
 
 
-
-I intend to compare these datasets to social media "reading lists" for the corresponding years, so I also located articles that listed the 2022, 2023, 2024, and 2025 most recommended titles on BookTok.
-1. For the 2022 list, I used: `=IMPORTHTML("https://mashable.com/article/most-read-books-2022-tiktok", "list")` 
-2. For the 2023 list, I used: `=IMPORTXML("https://www.usmagazine.com/entertainment/news/2023-booktok-recommendations-biggest-books-on-the-app/", "//h3[contains(text(), 'by') or contains(text(), 'Happy Place')]")` 
-3. For the 2024 list, I used: `=IMPORTXML("https://www.rollingstone.com/culture/culture-lists/booktok-best-books-2024-1235090973/piglet-by-lottie-hazel-1235203379/", "//h2")` 
-4. For the 2025 list, I used: `=IMPORTXML("https://www.kobo.com/blog/the-best-book-booktok-2025", "//h2")` 
+I intend to compare these datasets to social media "reading lists" for the corresponding years, so I also located articles that listed the 2022, 2023, 2024, and 2025 most recommended titles on BookTok. I then opened up another empty google sheet file, and used the following commands: 
+1. For the 2022 list: `=IMPORTHTML("https://mashable.com/article/most-read-books-2022-tiktok", "list")` 
+2. For the 2023 list: `=IMPORTXML("https://www.usmagazine.com/entertainment/news/2023-booktok-recommendations-biggest-books-on-the-app/", "//h3[contains(text(), 'by') or contains(text(), 'Happy Place')]")` 
+3. For the 2024 list: `=IMPORTXML("https://www.rollingstone.com/culture/culture-lists/booktok-best-books-2024-1235090973/piglet-by-lottie-hazel-1235203379/", "//h2")` 
+4. For the 2025 list: `=IMPORTXML("https://www.kobo.com/blog/the-best-book-booktok-2025", "//h2")` 
 
 
 ## 2. Understanding Data
 
 ### 2.1. VIMO Analysis
 
-Unfortunately, these datasets exclude digital platforms like overdrive. This means that an entire demographic of readers, those borrowing on the Libby app, are not being represented in this data. Luckily, I don't think it will significantly impact my intended story. 
+According to the metadata, this information is provided by the Ottawa Public Library, and the contact is listed ad OPL Finance and Business Services. 
 
-As mentioned previously, there are several missing values in the author column of each dataset. For example, the second title in the 2025 dataset, *Yellowstone*, does not name an author. 
+As seen in Rohrer (2023), when you are attempting to estimate the prevalence of something, like BookTok in Ottawa, it's important to have a representative sample of the population of interest. In this case, we are interested in Ottawa readers, but unfortunately, these datasets exclude digital platforms like overdrive. 
 
-Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
+This means that an entire demographic of readers, those borrowing on the Libby app, are not being represented in this data. Though it is unfortunate because I think that data would tell an interesting story about the increase of people borrowing audiobooks and reading digitially since COVID, I don't think it will significantly impact my intended story about how TikTok has influenced Ottawa readers as that impact is still evident in the hold statistics. 
 
-**For example:**
+Furthermore, I identified some interesting stories in my pitch that described Ottawa bookstores having an increased demand for certain titles and genres. This exploration would not require any data from Libby, as bookstores are only handling physical copies. 
 
-As seen in Bounegru & Gray (2011), a data visualization should be clear...
+Additionally, "estimating causal effects from observational data requires a lot of assumptions" (Rohrer, 2023) and that the "correlation yo observe in your sample won't neccesarily be the correlation in the population." (Rohrer, 2023). This is important to consider as Ottawa readers could be being influenced by friends, family, neighbors, or coworkers as opposed to being persuaded directly by infleuncers on BookTok.
+
+
+As mentioned previously, there are several missing values in the author column of each dataset. For example, the second title in the 2025 dataset, *Yellowstone*, does not name an author. Fortunately, no other columns are missing any information. 
+
 
 ### 2.2. Cleaning Data
 
-I selected the first 100 titles of each set, which I pasted into a new sheet (no longer attached to import). I deleted all of the unnesecary columns for my intended story, which were Collection, Catalogue, Format, FID, and Object ID. I froze the first row, and bolded the titles of each column for clarity. 
+I began by selecting the first 100 titles of each set, which I pasted into a new sheet (no longer attached to the import). I deleted all of the unnesecary columns for my intended story, which were Collection, Catalogue, Format, FID, and Object ID. I froze the first row, and bolded the titles of each column for clarity. 
 
-The 2025 dataset was not organized from most requested to least requested like the others, so I had to sort the sheet by column F (amount of holds) Z-A so that it would display the title with the most holds of 2025 as the first item. 
+The 2025 dataset was not organized from most requested to least requested like the others, so I had to sort the sheet by column F (amount of holds) Z-A so that it would display the title with the most holds of 2025 as the first item, and the rest in decreasing order. 
 
-I used `=SPLIT(A1, "by", FALSE)` on the 2022 and 2023 BookTok reading list imports to separate the title and authors names into two different columns for clarity and consistency.
+I filled in missing values by searching up the Title and Item Title on my browser and finding the attributed author. 
+
+Finally, I used find and replace to remove the slashes that appear after every item title, and made sure to identify the holds column as numbers with no visible decimal place. 
+
+![](cleaned-data-2022.png) <br> 
+*Figure 5: The cleaned 2022 Most Requested Titles dataset in Google Sheets.* 
+![](cleaned-data-2023.png) <br> 
+*Figure 6: The cleaned 2023 Most Requested Titles dataset in Google Sheets.* 
+![](cleaned-data-2024.png) <br> 
+*Figure 7: The cleaned 2024 Most Requested Titles dataset in Google Sheets.* 
+![](cleaned-data-2025.png) <br> 
+*Figure 8: The cleaned 2025 Most Requested Titles dataset in Google Sheets.* 
+
+I used `=SPLIT(A1, "by", FALSE)` on the 2022 and 2023 BookTok reading list imports to separate the title and authors names into two different columns for clarity and consistency with the other lists. 
 
 ### 2.3. Analyzing Data
 
-Insert text here.
+Insert text here. 
 
-**This section should include a screen capture of your pivot table, like so:**
 
-![](pivot-table-screen-capture.png)<br>
-*Figure 2: This pivot table shows...*
+![](pivot-table-2022.png)<br>
+*Figure 9: This pivot table shows the list of 2022 most requested titles sorted in descending order by sum of holds.*
+![](pivot-table-2023.png)<br>
+*Figure 10: This pivot table shows the list of 2023 most requested titles sorted in descending order by sum of holds.*
+![](pivot-table-2024.png)<br>
+*Figure 11: This pivot table shows the list of 2024 most requested titles sorted in descending order by sum of holds.*
+![](pivot-table-2025.png)<br>
+*Figure 12: This pivot table shows the list of 2025 most requested titles sorted in descending order by sum of holds.*
 
-**This section should also include a screen capture of your exploratory chart, like so:**
 
-![](chart-screen-capture.png)<br>
-*Figure 3: This exploratory chart shows...*
+![](count-genre-2022.png)<br>
+*Figure 13: This exploratory chart shows the most common genres in the 2022 list of most requested titles.* 
+![](count-genre-2023.png)<br>
+*Figure 14: This exploratory chart shows the most common genres in the 2023 list of most requested titles.* 
+![](count-genre-2024.png)<br>
+*Figure 15: This exploratory chart shows the most common genres in the 2024 list of most requested titles.* 
+![](count-genre-2025.png)<br>
+*Figure 16: This exploratory chart shows the most common genres in the 2025 list of most requested titles.* 
+
 
 ## 3. Delivering Data
 
@@ -92,8 +110,4 @@ Insert text here.
 
 ## 4. References
 
-Include a list of your references here. Please follow [APA](https://apastyle.apa.org/style-grammar-guidelines/references) or [MLA](https://www.mla.org/MLA-Style) guidelines for references. Hanging paragraphs aren't required though.
-
-**Here's an example:**
-
-Bounegru, L., & Gray, J. (Eds.). (2021). *The Data Journalism Handbook 2: Towards A Critical Data Practice*. Amsterdam University Press. [https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153](https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153)
+Rohrer, Juilia. (2023) *Non-representative samples! What could possibly go wrong?*. The 100% CI. [https://www.the100.ci/2023/03/07/non-representative-samples-what-could-possibly-go-wrong/] 
