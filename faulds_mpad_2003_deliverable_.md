@@ -69,30 +69,29 @@ I filled in missing values by searching up the Title and Item Title on my browse
 Finally, I used find and replace to remove the slashes that appear after every item title, and made sure to identify the holds column as numbers with no visible decimal place. 
 
 ![](cleaned-data-2022.png) <br> 
-*Figure 5: The cleaned 2022 Most Requested Titles dataset in Google Sheets.* 
+*Figure 5: The first 30 items in the cleaned 2022 Most Requested Titles dataset in Google Sheets.* 
 ![](cleaned-data-2023.png) <br> 
-*Figure 6: The cleaned 2023 Most Requested Titles dataset in Google Sheets.* 
+*Figure 6: The first 30 items in the cleaned 2023 Most Requested Titles dataset in Google Sheets.* 
 ![](cleaned-data-2024.png) <br> 
-*Figure 7: The cleaned 2024 Most Requested Titles dataset in Google Sheets.* 
+*Figure 7: The first 30 items in the cleaned 2024 Most Requested Titles dataset in Google Sheets.* 
 ![](cleaned-data-2025.png) <br> 
-*Figure 8: The cleaned 2025 Most Requested Titles dataset in Google Sheets.* 
+*Figure 8: The first 30 items in the cleaned 2025 Most Requested Titles dataset in Google Sheets.* 
 
 I used `=SPLIT(A1, "by", FALSE)` on the 2022 and 2023 BookTok reading list imports to separate the title and authors names into two different columns for clarity and consistency with the other lists. 
 
 ### 2.3. Analyzing Data
 
-Insert text here. 
-
+For my pivot tables added Item Titles in rows, and Holds for the value. I sorted the rows in descending order by the sum of holds. I chose to use these values because for my intended story, the item titles and number of times they were requested will be the most relevant for comparison. 
 
 ![](pivot-table-2022.png)<br>
-*Figure 9: This pivot table shows the list of 2022 most requested titles sorted in descending order by sum of holds.*
+*Figure 9: This pivot table shows the first 30 items of the 2022 most requested titles list sorted in descending order by sum of holds.*
 ![](pivot-table-2023.png)<br>
-*Figure 10: This pivot table shows the list of 2023 most requested titles sorted in descending order by sum of holds.*
-![](pivot-table-2024.png)<br>
-*Figure 11: This pivot table shows the list of 2024 most requested titles sorted in descending order by sum of holds.*
+*Figure 10: This pivot table shows the first 30 items of the 2023 most requested titles list sorted in descending order by sum of holds.*![](pivot-table-2024.png)<br>
+*Figure 11: This pivot table shows the first 30 items of the 2024 most requested titles list sorted in descending order by sum of holds.*
 ![](pivot-table-2025.png)<br>
-*Figure 12: This pivot table shows the list of 2025 most requested titles sorted in descending order by sum of holds.*
+*Figure 12: This pivot table shows the first 30 items of the 2025 most requested titles list sorted in descending order by sum of holds.*
 
+For my exploratory charts I decided to sort it by prevelance of genre. If I choose to write my story about how the OPL has experienced a similar demand for certain genres as local bookstores, this visualization will aid significantly. 
 
 ![](count-genre-2022.png)<br>
 *Figure 13: This exploratory chart shows the most common genres in the 2022 list of most requested titles.* 
@@ -106,8 +105,18 @@ Insert text here.
 
 ## 3. Delivering Data
 
-Insert text here.
+As mentioned, I think I have two logical paths I could take using these datasets. 
+1. By comparing titles from BookTok reading lists to titles in the OPL most requested list, I could explore the evident influence social media has had on the novels Ottawa readers are borrowing. It could shine a positive light on BookTok and how it contributed to the increase of readers during the pandemic. 
+2. By comparing the most prevelant genres within the OPL most requested list with what local bookstores reportedly saw an increased demand in, I could explore how the popularization of certain genres has led to an increase in customers and borrowers at both the OPL and local bookstores. For example, Capital Current published a piece with testimony that some bookstores had "essentially doubled the amount of fiction books" in store (Guido & Hartmann, 2025), and the pie charts for all four years (2022-2025) have fiction as the most requested genre. 
+
+To tell either of these stories, I feel I would need to find more consistent "reading lists" for the most popular BookTok titles from 2022-2025. Currently, my lists are different lenghts, I would ideally like a top 10 or top 20 of each year, but that might require I redownload TikTok and do my own investigating for some community compilation. 
+
+Booktokbooks.com seems like it could be a valuable source for either of these stories. As an independent discovery catalog, they create reading guides and catalogues by searching for themes associated with BookTok. But unfortunately they do not have any reading lists for past years. 
 
 ## 4. References
 
-Rohrer, Juilia. (2023) *Non-representative samples! What could possibly go wrong?*. The 100% CI. [https://www.the100.ci/2023/03/07/non-representative-samples-what-could-possibly-go-wrong/] 
+Rohrer, Juilia. (2023). *Non-representative samples! What could possibly go wrong?*. The 100% CI. [https://www.the100.ci/2023/03/07/non-representative-samples-what-could-possibly-go-wrong/] 
+
+Guido, C. & Hartmann, C. (2025). *BookTok turns a page in Ottawa's literary scene*. Capital Current. [https://capitalcurrent.ca/booktok-ottawa/]
+
+BookTok Books. [https://booktokbooks.com/editorial-policy.php]
