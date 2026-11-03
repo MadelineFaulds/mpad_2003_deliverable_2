@@ -5,13 +5,19 @@
 
 # Deliverable 2: Exploratory Data Analysis (EDA)
 
-## Foreword
+## Links to the Google Sheets 
 
+[Ottawa_Public_Library_Most_Requested_Titles_of_2022](https://docs.google.com/spreadsheets/d/1X9Aful84ntBrz6NG8ZpDD94VnTCLKhBlaBOwrlo-n7s/edit?usp=sharing) 
+[Ottawa_Public_Library_Most_Requested_Titles_of_2023](https://docs.google.com/spreadsheets/d/12PfV5NpHmpAjAT8d8YBTP-X3DmZbhhIxJ6D4bbjaDp4/edit?usp=sharing) 
+[Ottawa_Public_Library_Most_Requested_Titles_of_2024](https://docs.google.com/spreadsheets/d/1wST9GvWeqBnReHDUnCmvq85JMPlzhxgo-GWWBkcZVTk/edit?usp=sharing)
+[Ottawa_Public_Library_Most_Requested_Titles_of_2025](https://docs.google.com/spreadsheets/d/1nCkkxMXLL-aAy1IVxvSHmFKDRVIqFz4dOMQv_7qRgLU/edit?usp=sharing)
+
+[BookTok_Readings_Lists](https://docs.google.com/spreadsheets/d/1uqtfyiRyu6x4U-5Tr2tDksxDA9hDUCd7dTtn9vkgrQ4/edit?usp=sharing)
 
 
 ## 1. Getting Data
 
-I located the 2022, 2023, 2024, and 2025 datasets for the most requested titles at the Ottawa public Library, and downloaded each dataset in CSV format. I then entered an empty google sheet document, where I clicked file -> import, and uploaded the CSV files one at a time, and then imported the data. 
+I began by locating the 2022, 2023, 2024, and 2025 datasets for the most requested titles at the Ottawa public Library on Open Ottawa, and downloaded each dataset in CSV format. I then entered an empty google sheet document, where I clicked file -> import, and uploaded the CSV files one at a time, and then imported the data. 
 
 ![](import-screen-capture-2022.png) <br> 
 *Figure 1: The "Import File" prompt on Google Sheets for the 2022 dataset.*
@@ -24,7 +30,7 @@ I located the 2022, 2023, 2024, and 2025 datasets for the most requested titles 
 
 The 2022 list of most requested titles has 57,050 rows (excluding the title row), and 13 columns. The data is relatively clean, but does have a few missing values in the author column (G).  
 
-The 2023 list of most requested titles has 96,113 rows (excluding the title row), and 13 columns. This set is also very clean, but also has several missing values in column G (authors names). 
+The 2023 list of most requested titles has 96,113 rows (excluding the title row), and 13 columns. This set is also very clean, but also has several missing values in column G. 
 
 the 2024 list of most requested titles has 135,036 rows (excluding the title row), and 14 columns. There appear to far less missing values in column G, but there are certainly still empty slots. 
 
