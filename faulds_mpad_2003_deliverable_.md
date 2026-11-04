@@ -1,11 +1,11 @@
-**November 3rd, 2026**<br>
+**November 4th, 2026**<br>
 **MPAD2003A Introductory Data Storytelling**<br>
 **Madeline Faulds**<br>
 **Presented to Jean-Sébastien Marier**<br>
 
 # Deliverable 2: Exploratory Data Analysis (EDA)
 
-## Links to the Google Sheets 
+### Links to the Google Sheets 
 
 [Ottawa_Public_Library_Most_Requested_Titles_of_2022](https://docs.google.com/spreadsheets/d/1X9Aful84ntBrz6NG8ZpDD94VnTCLKhBlaBOwrlo-n7s/edit?usp=sharing) 
 [Ottawa_Public_Library_Most_Requested_Titles_of_2023](https://docs.google.com/spreadsheets/d/12PfV5NpHmpAjAT8d8YBTP-X3DmZbhhIxJ6D4bbjaDp4/edit?usp=sharing) 
@@ -17,7 +17,7 @@
 
 ## 1. Getting Data
 
-I began by locating the 2022, 2023, 2024, and 2025 datasets for the most requested titles at the Ottawa Public Library on Open Ottawa, and downloaded each dataset in CSV format. I then entered an empty Google Sheets document, where I clicked file -> import, and uploaded the CSV files one at a time, and then imported the data. 
+I began by locating the 2022, 2023, 2024, and 2025 datasets for the most requested titles at the Ottawa Public Library on Open Ottawa, and downloaded each dataset in CSV format. I then entered an empty Google Sheets document, where I clicked file -> import, and uploaded the CSV files one at a time and then imported the data. 
 
 ![](import-screen-capture-2022.png) <br> 
 *Figure 1: The "Import File" prompt on Google Sheets for the 2022 dataset.*
@@ -39,7 +39,7 @@ The 2025 list of most requested titles has 126,969 rows (excluding the title row
 The most relevant columns in all of these datasets will be column D, which contains the book titles, and H, which contains the number of holds. 
 
 
-I intend to compare these datasets to social media "reading lists" for the corresponding years, so I also located articles that listed the 2022, 2023, 2024, and 2025 most recommended titles on BookTok. I then opened up another empty Google Sheet file and used the following commands: 
+I intend to compare these datasets to social media "reading lists" for the corresponding years, so for research p I also located articles that listed the 2022, 2023, 2024, and 2025 most recommended titles on BookTok. I then opened up another empty Google Sheet file and used the following commands: 
 1. For the 2022 list: `=IMPORTHTML("https://mashable.com/article/most-read-books-2022-tiktok", "list")` 
 2. For the 2023 list: `=IMPORTXML("https://www.usmagazine.com/entertainment/news/2023-booktok-recommendations-biggest-books-on-the-app/", "//h3[contains(text(), 'by') or contains(text(), 'Happy Place')]")` 
 3. For the 2024 list: `=IMPORTXML("https://www.rollingstone.com/culture/culture-lists/booktok-best-books-2024-1235090973/piglet-by-lottie-hazel-1235203379/", "//h2")` 
